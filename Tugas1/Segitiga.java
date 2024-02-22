@@ -26,7 +26,7 @@ public class Segitiga {
         double keliling = a + b + c;
         double luas = alas * tinggi / 2;
 
-        System.out.println("Keliling Segitiga : "+keliling+ " cm");
+        System.out.println("Keliling Segitiga : " + keliling + " cm");
         System.out.println("Luas segita : " + luas + " cm");
 
         scanner.close();
