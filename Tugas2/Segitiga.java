@@ -1,6 +1,6 @@
 package Tugas2;
 
-public class Class {
+public class Segitiga {
     public static void main(String[] args) {
         Triangle triangle = new Triangle(10,5);
 
