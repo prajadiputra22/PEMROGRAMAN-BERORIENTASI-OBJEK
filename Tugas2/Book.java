@@ -8,12 +8,12 @@ public class Book {
         Books book = new Books("Darmawan", "Jiwa Yang Teriak Dalam Kegelapan", 40000.00, 1);
 
         String informasi = book.infromasi();
-        System.out.println("Informasi buku { " + informasi + "}");
+        System.out.println("\nInformasi buku " + informasi);
 
         System.out.print("Masukkan jumlah buku yang ingin dibeli: ");
         int jumlahBuku = scanner.nextInt();
         double totalPrice = book.calculateBooks(jumlahBuku);
-        System.out.println("Total pembelian buku : " + totalPrice);
+        System.out.println("Total pembelian buku : Rp." + totalPrice + '\n');
 
         scanner.close();
     }
