@@ -9,13 +9,13 @@ public class Book {
         Books book2 = new Books("Kaka", "Indahnya Kesensdirian", 40000.00, 2);
         Books book3 = new Books("Prajadiputra", "Jiwa Yang Terluka", 50000.00, 3);
 
-        String informasi1 = book1.infromasi();
+        String informasi1 = book1.informasi();
         System.out.println("\nInformasi buku " + informasi1);
 
-        String informasi2 = book2.infromasi();
+        String informasi2 = book2.informasi();
         System.out.println(informasi2);
 
-        String informasi3 = book3.infromasi();
+        String informasi3 = book3.informasi();
         System.out.println(informasi3);
 
         System.out.print("Masukkan jumlah buku Darmawan yang ingin dibeli: ");
@@ -67,7 +67,7 @@ class Books {
         return jumlahBuku * this.price;
     }
 
-    public String infromasi() {
+    public String informasi() {
         return '\n' +
                 "author          : " + author + '\n' +
                 "title           : " + title + '\n' +
