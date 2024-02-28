@@ -5,14 +5,29 @@ import java.util.Scanner;
 public class Book {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Books book = new Books("Darmawan", "Jiwa Yang Teriak Dalam Kegelapan", 40000.00, 1);
+        Books book1 = new Books("Darmawan", "Jiwa Yang Teriak Dalam Kegelapan", 40000.00, 1);
+        Books book2 = new Books("Kaka", "Indahnya Kesensdirian", 30000.00, 2);
+        Books book3 = new Books("Prajadiputra", "Jiwa Yang Terluka", 50000.00, 3);
 
-        String informasi = book.infromasi();
-        System.out.println("\nInformasi buku " + informasi);
+        String informasi1 = book1.infromasi();
+        System.out.println("\nInformasi buku " + informasi1);
 
-        System.out.print("Masukkan jumlah buku yang ingin dibeli: ");
-        int jumlahBuku = scanner.nextInt();
-        double totalPrice = book.calculateBooks(jumlahBuku);
+        String informasi2 = book2.infromasi();
+        System.out.println("\nInformasi buku " + informasi2);
+
+        String informasi3 = book3.infromasi();
+        System.out.println("\nInformasi buku " + informasi3);
+
+        System.out.print("Masukkan jumlah buku Darmawan yang ingin dibeli: ");
+        int jumlahBuku1 = scanner.nextInt();
+
+        System.out.print("Masukkan jumlah buku Kaka yang ingin dibeli: ");
+        int jumlahBuku2 = scanner.nextInt();
+
+        System.out.print("Masukkan jumlah buku Prajadiputra yang ingin dibeli: ");
+        int jumlahBuku3 = scanner.nextInt();
+
+        double totalPrice = book1.calculateBooks(jumlahBuku1) + book2.calculateBooks(jumlahBuku2) + book3.calculateBooks(jumlahBuku3);
         System.out.println("Total pembelian buku : Rp." + totalPrice + '\n');
 
         scanner.close();
