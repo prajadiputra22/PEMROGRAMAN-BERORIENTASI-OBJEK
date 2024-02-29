@@ -5,30 +5,26 @@ import java.util.Scanner;
 public class Book {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Books book1 = new Books("Darmawan", "Jiwa Yang Teriak Dalam Kegelapan", 30000.00, 1);
-        Books book2 = new Books("Kaka", "Indahnya Kesensdirian", 40000.00, 2);
-        Books book3 = new Books("Prajadiputra", "Jiwa Yang Terluka", 50000.00, 3);
 
-        String informasi1 = book1.informasi();
-        System.out.println("\nInformasi buku " + informasi1);
+        Books[] books = new Books[3];
+        books[0] = new Books("Darmawan", "Jiwa Yang Teriak Dalam Kegelapan", 30000.00, 1);
+        books[1] = new Books("Kaka", "Indahnya Kesensdirian", 40000.00, 2);
+        books[2] = new Books("Prajadiputra", "Jiwa Yang Terluka", 50000.00, 3);
 
-        String informasi2 = book2.informasi();
-        System.out.println(informasi2);
+        for (Books book : books) {
+            String informasi = book.informasi();
+            System.out.println("\nInformasi buku " + informasi);
+        }
 
-        String informasi3 = book3.informasi();
-        System.out.println(informasi3);
+        double totalPrice = 0;
 
-        System.out.print("Masukkan jumlah buku Darmawan yang ingin dibeli: ");
-        int jumlahBuku1 = scanner.nextInt();
+        for (Books book : books) {
+            System.out.print("Masukkan jumlah buku " + book.getAuthor() + " yang ingin dibeli: ");
+            int jumlahBuku = scanner.nextInt();
+            totalPrice += book.calculateBooks(jumlahBuku);
+        }
 
-        System.out.print("Masukkan jumlah buku Kaka yang ingin dibeli: ");
-        int jumlahBuku2 = scanner.nextInt();
-
-        System.out.print("Masukkan jumlah buku Prajadiputra yang ingin dibeli: ");
-        int jumlahBuku3 = scanner.nextInt();
-
-        double totalPrice = book1.calculateBooks(jumlahBuku1) + book2.calculateBooks(jumlahBuku2) + book3.calculateBooks(jumlahBuku3);
-        System.out.println("\n Total pembelian buku : Rp." + totalPrice + '\n');
+        System.out.println("\nTotal pembelian buku : Rp." + totalPrice + '\n');
 
         scanner.close();
     }
