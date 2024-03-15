@@ -1,7 +1,7 @@
 package Tugas4;
 
 public class Segitiga extends BangunDatar {
-    
+
     protected double sisiA;
     protected double sisiB;
     protected double sisiC;
@@ -23,32 +23,32 @@ public class Segitiga extends BangunDatar {
     public void hitungKeliling() {
         this.keliling = sisiA + sisiB + sisiC;
     }
+}
 
-    static class SegitigaSikuSiku extends Segitiga {
-        public SegitigaSikuSiku(double alas, double tinggi) {
-            super(alas, tinggi, Math.sqrt(alas * alas + tinggi * tinggi));
-            super.setName("Segitiga Siku-Siku");
-        }
+class SegitigaSikuSiku extends Segitiga {
+    public SegitigaSikuSiku(double alas, double tinggi) {
+        super(alas, tinggi, Math.sqrt(alas * alas + tinggi * tinggi));
+        super.setName("Segitiga Siku-Siku");
     }
+}
 
-    static class SegitigaSamaKaki extends Segitiga {
-        public SegitigaSamaKaki(double alas, double tinggi) {
-            super(alas, tinggi, tinggi);
-            super.setName("Segitiga Sama Kaki");
-        }
+class SegitigaSamaKaki extends Segitiga {
+    public SegitigaSamaKaki(double alas, double tinggi) {
+        super(alas, tinggi, tinggi);
+        super.setName("Segitiga Sama Kaki");
     }
+}
 
-    static class SegitigaSamaSisi extends Segitiga {
-        public SegitigaSamaSisi(double sisi) {
-            super(sisi, sisi, sisi);
-            super.setName("Segitiga Sama Sisi");
-        }
+class SegitigaSamaSisi extends Segitiga {
+    public SegitigaSamaSisi(double sisi) {
+        super(sisi, sisi, sisi);
+        super.setName("Segitiga Sama Sisi");
     }
+}
 
-    static class SegitigaSembarang extends Segitiga {
-        public SegitigaSembarang(double sisiA, double sisiB, double sisiC) {
-            super(sisiA, sisiB, sisiC);
-            super.setName("Segitiga Sembarang");
-        }
+class SegitigaSembarang extends Segitiga {
+    public SegitigaSembarang(double sisiA, double sisiB, double sisiC) {
+        super(sisiA, sisiB, sisiC);
+        super.setName("Segitiga Sembarang");
     }
 }
