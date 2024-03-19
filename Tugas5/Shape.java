@@ -42,7 +42,7 @@ class Rectangle {
         this.width = width;
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return length * width;
     }
 
