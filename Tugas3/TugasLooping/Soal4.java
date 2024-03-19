@@ -1,4 +1,4 @@
-package TugasLooping;
+package Tugas3.TugasLooping;
 
 public class Soal4 {
     public static void main(String[] args) {
