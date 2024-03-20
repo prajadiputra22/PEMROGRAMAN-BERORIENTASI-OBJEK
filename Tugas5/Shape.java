@@ -13,11 +13,16 @@ abstract class Shape {
         Circle Lingkaran = new Circle(7);
         double LuasL = Lingkaran.calculateArea();
         System.out.println("Luas Lingkaran dengan: " + LuasL);
+
+        System.out.println("Volatile: " + volatileValue);
+        System.out.println("Transient: " + transientValue);
     }
+    static volatile int volatileValue = 10;
+    static transient int transientValue = 20;
 }
 
 class Square {
-    public double side;
+    protected double side;
 
     public Square(double side) {
         this.side = side;
@@ -26,35 +31,25 @@ class Square {
     public double calculateArea() {
         return side * side;
     }
-
-    protected double getSide() {
-        return side;
-    }
 }
 
 class Rectangle {
     private double length;
     protected double width;
 
-    // Modifier access public untuk constructor
     public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return length * width;
     }
-
-    protected double getLength() {
-        return length;
-    }
-
-    static final double PI = 3.14159;
 }
 
 class Circle {
     private double radius;
+    final double PI = 3.14159;
 
     public Circle(double radius) {
         this.radius = radius;
@@ -62,7 +57,7 @@ class Circle {
 
     public double calculateArea() {
         synchronized (this) {
-            double area = Rectangle.PI * radius * radius;
+            double area = PI * radius * radius;
             return area;
         }
     }
