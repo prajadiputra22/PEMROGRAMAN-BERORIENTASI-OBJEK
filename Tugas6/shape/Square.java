@@ -16,7 +16,7 @@ public class Square implements Shape, Printable {
     }
 
     public void print(){
-        System.out.println("Persegi");
+        System.out.println("Persegi & Persegi Panjang");
     }
 
     public void setPaper(){
