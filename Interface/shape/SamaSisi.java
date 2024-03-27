@@ -1,17 +1,20 @@
 package shape;
 
 public class SamaSisi extends Triangle{
-    public SamaSisi (double sisi) {
-        super(sisi, sisi, sisi);
+    protected double alas;
+    protected double tinggi;
+
+    public SamaSisi (double alas, double tinggi) {
+        this.alas = alas;
+        this.tinggi = tinggi;
         super.setName("Segitiga Sama Sisi");
     }
 
     public double luas() {
-        double s = (sisiA + sisiB + sisiC) / 2;
-        return Math.sqrt(s * (s - sisiA) * (s - sisiB) * (s - sisiC));
+        return ((alas/2)*tinggi)/2;
     }
 
     public double keliling() {
-        return sisiA + sisiB + sisiC;
+        return 3 * alas;
     }
 }

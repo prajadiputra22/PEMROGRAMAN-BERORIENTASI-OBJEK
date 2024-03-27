@@ -1,17 +1,21 @@
 package shape;
 
 public class SamaKaki extends Triangle{
+    protected double alas;
+    protected double tinggi;
+
     public SamaKaki (double alas, double tinggi) {
-        super(alas, tinggi, tinggi);
+        this.alas = alas;
+        this.tinggi = tinggi;
         super.setName("Segitiga Sama Kaki");
     }
 
     public double luas() {
-        double s = (sisiA + sisiB + sisiC) / 2;
-        return Math.sqrt(s * (s - sisiA) * (s - sisiB) * (s - sisiC));
+        return ((alas/2)*tinggi)/2;
     }
 
     public double keliling() {
-        return sisiA + sisiB + sisiC;
+        double sm = Math.sqrt((alas/2)*(alas/2) + tinggi*tinggi);
+        return 2 * sm + alas;
     }
 }

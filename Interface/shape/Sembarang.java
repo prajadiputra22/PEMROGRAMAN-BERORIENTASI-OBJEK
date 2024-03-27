@@ -1,8 +1,14 @@
 package shape;
 
 public class Sembarang extends Triangle{
+    protected double sisiA;
+    protected double sisiB;
+    protected double sisiC;
+
     public Sembarang(double sisiA, double sisiB, double sisiC) {
-        super(sisiA, sisiB, sisiC);
+        this.sisiA = sisiA;
+        this.sisiB = sisiB;
+        this.sisiC = sisiC;
         super.setName("Segitiga Sembarang");
     }
 

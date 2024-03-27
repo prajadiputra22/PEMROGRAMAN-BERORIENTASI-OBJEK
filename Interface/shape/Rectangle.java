@@ -1,19 +1,12 @@
 package shape;
 
 public class Rectangle implements Shape {
-    private double panjang;
-    private double lebar;
+    public double panjang;
+    public double lebar;
 
     public Rectangle(double panjang, double lebar){
         this.panjang = panjang;
         this.lebar = lebar;
-    }
-
-    public double lebar(){
-        return lebar;
-    }
-    public double panjang(){
-        return panjang;
     }
     
     public double luas(){

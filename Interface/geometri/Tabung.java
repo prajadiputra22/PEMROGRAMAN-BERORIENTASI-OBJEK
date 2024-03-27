@@ -10,11 +10,11 @@ public class Tabung extends Circle implements Geometri{
     }
 
     public double volume(){
-        return keliling() * tinggi;
+        return luas() * tinggi;
     }
 
     public double luasPermukaan(){
-        return luas() * tinggi;
+        return keliling() * (radius+tinggi);
     }
 
     public void getInfo(){

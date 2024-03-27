@@ -7,8 +7,8 @@ public class app {
         Square Persegi = new Square(6);
         Rectangle PersegiPanjang = new Rectangle(7,5);
         Circle Lingkaran = new Circle(8);
-        SamaKaki SamaKaki = new SamaKaki(7, 5);
-        SamaSisi SamaSisi = new SamaSisi(5);
+        SamaKaki SamaKaki = new SamaKaki(8, 6);
+        SamaSisi SamaSisi = new SamaSisi(5,7);
         Sikusiku Sikusiku = new Sikusiku(5, 7);
         Sembarang Sembarang = new Sembarang(5, 6, 7);
         
