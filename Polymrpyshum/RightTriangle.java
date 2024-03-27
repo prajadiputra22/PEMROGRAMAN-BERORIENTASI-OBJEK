@@ -31,8 +31,4 @@ public class RightTriangle extends Triangle {
         System.out.print("\n and hypotenuse: " + this.getHyptenuse() + "\n");
         System.out.println();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1165879845214d043f36069d8bd68e04a86dca83

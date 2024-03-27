@@ -16,4 +16,11 @@ public class Tabung extends Circle implements Geometri{
     public double luasPermukaan(){
         return luas() * tinggi;
     }
+
+    public void getInfo(){
+        System.out.println("\nBola dengan radius " + radius + " dan tinggi " + tinggi);
+        System.out.printf("Volume: %.2f\n", volume());
+        System.out.printf("Luas permukaan: %.2f\n", luasPermukaan());
+    }
+
 }
