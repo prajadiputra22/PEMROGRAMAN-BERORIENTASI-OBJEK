@@ -16,7 +16,7 @@ public class Circle implements Shape{
     }
 
     public void getInfo(){
-        System.out.println("\nLingkaran dengan jari-jari " + radius);
+        System.out.println("\nLingkaran dengan radius " + radius);
         System.out.printf("Luas: %.2f\n", luas());
         System.out.printf("Keliling: %.2f\n", keliling());
     }
