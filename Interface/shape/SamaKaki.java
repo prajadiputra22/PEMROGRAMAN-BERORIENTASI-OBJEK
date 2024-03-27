@@ -3,7 +3,7 @@ package shape;
 public class SamaKaki extends Triangle{
     public SamaKaki (double alas, double tinggi) {
         super(alas, tinggi, tinggi);
-        super.setName("Segitiga Siku-Siku");
+        super.setName("Segitiga Sama Kaki");
     }
 
     public double luas() {
