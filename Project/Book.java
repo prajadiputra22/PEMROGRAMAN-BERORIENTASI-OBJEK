@@ -2,13 +2,13 @@ public class Book {
     private String title;
     private String genre;
     private String author;
-    private Integer tahunTerbit;
+    private Integer publication_year;
 
-    public Book(String title, String genre, String author, Integer tahunTerbit) {
+    public Book(String title, String genre, String author, Integer publication_year) {
         this.title = title;
         this.genre = genre;
         this.author = author;
-        this.tahunTerbit = tahunTerbit;
+        this.publication_year = publication_year;
     }
 
     // Getter methods
@@ -24,8 +24,8 @@ public class Book {
         return author;
     }
 
-    public Integer gettahunTerbit() {
-        return tahunTerbit;
+    public Integer getPublicationYear() {
+        return publication_year;
     }
 
     public String toString() {
@@ -33,6 +33,6 @@ public class Book {
         "\nTitle            : " + title +
         "\nGenre            : " + genre +
         "\nAuthor           : " + author +
-        "\nPublication Year : " + tahunTerbit;
+        "\nPublication Year : " + publication_year;
     }
 }

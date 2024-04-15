@@ -45,10 +45,10 @@ public class LibraryApp {
         String genre = scanner.nextLine();
         System.out.print("Author: ");
         String author = scanner.nextLine();
-        System.out.print("Publisher Year: ");
-        Integer tahun = scanner.nextInt();
+        System.out.print("Publication Year: ");
+        Integer publication_year = scanner.nextInt();
 
-        Book book = new Book(title, genre, author, tahun);
+        Book book = new Book(title, genre, author, publication_year);
         library.addBook(book);
         System.out.println("Book added successfully!");
     }
@@ -58,13 +58,13 @@ public class LibraryApp {
     }
 
     private static void searchBook() {
-        System.out.println("Search Options:");
+        System.out.println("\nSearch Options:");
         System.out.println("1. Search by Title");
         System.out.println("2. Search by Genre");
         System.out.println("3. Search by Author");
         System.out.print("Enter your choice: ");
         int searchChoice = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine();
 
         switch (searchChoice) {
             case 1:
