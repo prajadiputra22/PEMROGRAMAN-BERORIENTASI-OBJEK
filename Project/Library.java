@@ -8,7 +8,7 @@ public class Library {
         books = new ArrayList<>();
     }
 
-    public void addBook(Book book) {
+    public void tambahBuku(Book book) {
         books.add(book);
     }
 
@@ -18,7 +18,7 @@ public class Library {
         }
     }
 
-    public List<Book> searchByTitle(String title) {
+    public List<Book> ByTitle(String title) {
         List<Book> result = new ArrayList<>();
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
@@ -28,7 +28,7 @@ public class Library {
         return result;
     }
 
-    public List<Book> searchByGenre(String genre) {
+    public List<Book> ByGenre(String genre) {
         List<Book> result = new ArrayList<>();
         for (Book book : books) {
             if (book.getGenre().equalsIgnoreCase(genre)) {
@@ -38,7 +38,7 @@ public class Library {
         return result;
     }
 
-    public List<Book> searchByAuthor(String author) {
+    public List<Book> ByAuthor(String author) {
         List<Book> result = new ArrayList<>();
         for (Book book : books) {
             if (book.getAuthor().equalsIgnoreCase(author)) {

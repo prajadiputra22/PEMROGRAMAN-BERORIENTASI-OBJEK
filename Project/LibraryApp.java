@@ -1,4 +1,4 @@
-import java.util.List; // Import List class
+import java.util.List; 
 import java.util.Scanner;
 
 public class LibraryApp {
@@ -8,91 +8,91 @@ public class LibraryApp {
     public static void main(String[] args) {
         boolean exit = false;
         while (!exit) {
-            System.out.println("\nLibrary Management System");
-            System.out.println("1. Add Book");
-            System.out.println("2. View Books");
-            System.out.println("3. Search Book");
+            System.out.println("\nSISTEM MANAJEMEN PERPUSTAKAAN");
+            System.out.println("1. Tambah Buku");
+            System.out.println("2. Lihat Buku");
+            System.out.println("3. Pencarian");
             System.out.println("4. Exit");
-            System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
+            System.out.print("Pilihan: ");
+            int pilihan = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
-            switch (choice) {
+            switch (pilihan) {
                 case 1:
-                    addBook();
+                    tambahBuku();
                     break;
                 case 2:
-                    viewBooks();
+                    lihatBuku();
                     break;
                 case 3:
-                    searchBook();
+                    pencarian();
                     break;
                 case 4:
                     exit = true;
                     System.out.println("Exiting...");
                     break;
                 default:
-                    System.out.println("Invalid choice, please try again.");
+                    System.out.println("Invalid pilihan, please try again.");
             }
         }
         scanner.close();
     }
 
-    private static void addBook() {
+    private static void tambahBuku() {
         System.out.print("\nTitle: ");
         String title = scanner.nextLine();
         System.out.print("Genre: ");
         String genre = scanner.nextLine();
         System.out.print("Author: ");
         String author = scanner.nextLine();
-        System.out.print("Publication Year: ");
-        Integer publication_year = scanner.nextInt();
+        System.out.print("Tahun Terbit: ");
+        Integer tahun_terbit = scanner.nextInt();
 
-        Book book = new Book(title, genre, author, publication_year);
-        library.addBook(book);
-        System.out.println("Book added successfully!");
+        Book book = new Book(title, genre, author, tahun_terbit);
+        library.tambahBuku(book);
+        System.out.println("Buku berhasil ditambahkan!");
     }
 
-    private static void viewBooks() {
+    private static void lihatBuku() {
         library.displayBooks();
     }
 
-    private static void searchBook() {
-        System.out.println("\nSearch Options:");
-        System.out.println("1. Search by Title");
-        System.out.println("2. Search by Genre");
-        System.out.println("3. Search by Author");
-        System.out.print("Enter your choice: ");
+    private static void pencarian() {
+        System.out.println("\nPilihan Pencarian:");
+        System.out.println("1. By Title");
+        System.out.println("2. By Genre");
+        System.out.println("3. By Author");
+        System.out.print("Pilihan: ");
         int searchChoice = scanner.nextInt();
         scanner.nextLine();
 
         switch (searchChoice) {
             case 1:
-                System.out.print("\nEnter title to search: ");
+                System.out.print("\nMasukan Title: ");
                 String title = scanner.nextLine();
-                System.out.println("Search results by title:");
-                displaySearchResults(library.searchByTitle(title));
+                System.out.println("Hasil Pencarian:");
+                displaySearchResults(library.ByTitle(title));
                 break;
             case 2:
-                System.out.print("Enter genre to search: ");
+                System.out.print("\nMasukan Genre: ");
                 String genre = scanner.nextLine();
-                System.out.println("Search results by genre:");
-                displaySearchResults(library.searchByGenre(genre));
+                System.out.println("Hasil Pencarian:");
+                displaySearchResults(library.ByGenre(genre));
                 break;
             case 3:
-                System.out.print("Enter author to search: ");
+                System.out.print("\nMasukan Author: ");
                 String author = scanner.nextLine();
-                System.out.println("Search results by author:");
-                displaySearchResults(library.searchByAuthor(author));
+                System.out.println("Hasil Pencarian:");
+                displaySearchResults(library.ByAuthor(author));
                 break;
             default:
-                System.out.println("Invalid choice.");
+                System.out.println("Pilihan salah.");
         }
     }
 
     private static void displaySearchResults(List<Book> books) {
         if (books.isEmpty()) {
-            System.out.println("No matching books found.");
+            System.out.println("Buku tidak ditemukan.");
         } else {
             for (Book book : books) {
                 System.out.println(book);
