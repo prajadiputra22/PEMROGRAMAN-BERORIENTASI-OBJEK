@@ -49,7 +49,7 @@ public class LibraryApp {
         Integer tahun_terbit = scanner.nextInt();
 
         Book book = new Book(title, genre, author, tahun_terbit);
-        library.tambahBuku(book);
+        library.addBook(book);
         System.out.println("Buku berhasil ditambahkan!");
     }
 

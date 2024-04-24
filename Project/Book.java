@@ -11,6 +11,7 @@ public class Book {
         this.tahun_terbit = tahun_terbit;
     }
 
+    // Getter methods
     public String getTitle() {
         return title;
     }
@@ -23,7 +24,7 @@ public class Book {
         return author;
     }
 
-    public Integer getPublicationYear() {
+    public Integer getPublisher() {
         return tahun_terbit;
     }
 
